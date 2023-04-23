@@ -1,0 +1,80 @@
+html{
+    background-color: rgb(179, 174, 174);
+}
+.gallery{
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: Century Gothic;
+    text-align: center;
+}
+
+.submit a:link, a:visited{
+    padding: 15px 25px;
+    margin-left: 30px;
+    font-family: 'Century Gothic';
+    background-color: #7c7c7c;
+    color: #000000;
+    display: inline-block;
+    text-decoration: none;
+}
+.submit a:hover, a:active{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar{
+    font-family: 'Century Gothic';
+    font-size: medium;
+    text-align: center;
+    background-color: black;
+
+}
+.navbar a:link, .navbar a:visited{
+    padding: 15px 25px;
+    margin-left: 30px;
+    font-family: 'Century Gothic';
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+}
+.navbar a:hover, .navbar a:active{
+    background-color: #7c7c7c;
+    font-weight: bold;
+    color: #000000;
+}
+
+.featured{
+  overflow-x: auto;
+  padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.image{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  padding: 0 4px;
+  justify-content: space-between;
+}
+
+.image img{
+  margin-top: 8px;
+  vertical-align: middle;
+  width: auto;
+  height: 200px;
+  border-radius: 2%;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px){
+  .image{
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px){
+  .image{
+    flex: 100%;
+    max-width: 100%;
+  }
+}
