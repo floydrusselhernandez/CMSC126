@@ -1,0 +1,131 @@
+.wish {
+    background-color: gray;
+}
+  
+.page-title h1 {
+    font-family: Impact;
+    font-size: 50px;
+    margin-left: 30px;
+    letter-spacing: 1px;
+}
+
+.sort-by {
+    font-family: Arial;
+    font-size: 20px;
+    margin-right: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.sortby {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 450px;
+}
+
+select[name="sortby"] {
+    width: 170px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 18px;
+    border: none;
+    background-color: #c3c3c3;
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% + 5px) center;
+}
+
+.category, .genre, .price {
+    font-family: Arial;
+    font-size: 20px;
+    margin-left: 30px;
+    color: gray;
+    white-space: nowrap;
+}
+
+.category [for=categories] {
+    color: black;
+    font-size: 25px;
+}
+
+.genre [for=genre] {
+    color: black;
+    font-size: 25px;
+}
+
+.price [for=price] {
+    color: black;
+    font-size: 25px;
+}
+
+.wish-container {
+    float:right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.wishlist {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+    margin-right: 30px; 
+}
+
+.wishlist-img img {
+    max-width: 250px;
+    border-radius: 10%;
+    border: 3px solid black;
+    object-fit: cover;
+    height: 250px;
+}
+
+.wishlist-info h3 {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.wishlist-info {
+    margin-left: 5px;
+    font-family: Arial;
+    font-size: 15px;
+    line-height: 10px;
+}
+
+.items {
+    padding-left: 50px;
+}
+
+.wishlist-item{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 5px;
+    box-shadow: 10px 10px 5px gray;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 10%;
+}
+
+.wishlist-btn {
+    text-align: center;
+}
+
+.wishlist-img img {
+    transition: transform 0.5s;
+  }
+  
+  .wishlist-img img:hover {
+    transform: scale(1.1);
+  }

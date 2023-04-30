@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Header</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="header.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <!-- Logo and Name -->
+            <div class="header-logo">
+                <a href="#">
+                    <img id="Logo_White"src="res/Logo_White.png">
+                    <img id="AnimaniacTxt_White"src="res/AnimaniacTxt_White.png">
+                </a>
+            </div>
+            <!-- Explore Dropdown -->
+            <div class="explore">
+                <button class="explorebtn">Explore
+                    <div class="fas fa-caret-down" id="search-btn">
+                    </div>
+                </button>
+                <div class="explore-content">
+                    <table style="width:100%">
+                        <tr>
+                          <th><a href="#"><b><u>News</u></b></a></>
+                          <th><a href="#"><b><u>Gallery</u></b></a></th>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Release Dates</a></td>
+                          <td><a href="#">Artworks</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Featured Articles</a></td>
+                          <td><a href="#">Submit Artworks</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Upcoming Sale</a></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <!-- Filter -->
+            <div class="filter">
+                <select name="filter">
+                    <option value="" disabled selected hidden>Filter by</option>
+                    <option value="all">All</option>
+                    <option value="figures">Figures</option>
+                    <option value="books">Books</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="news">News</option>
+                    <option value="artworks">Artworks</option>
+                </select>
+            </div>
+            <!-- Search Bar -->
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <a href="#">
+                    <div class="fas fa-search" id="search-btn">
+                    </div>
+                </a>
+            </div>
+            <!-- Icons -->
+            <div class="icons">
+                <a href="#" class="wish">
+                    <div class="fas fa-heart" id="wishlist-btn">
+                    </div>
+                </a>
+                <a href="#" class="cart">
+                    <div class="fas fa-shopping-cart" id="cart-btn">
+                    </div>
+                </a>
+                <a href="#" class="notif">
+                    <div class="fas fa-bell" id="notif-btn">
+                    </div>
+                </a>
+                <a href="#" class="user">
+                    <div class="fas fa-user" id="user-btn">
+                    </div>
+                </a>
+            </div>
+        </header>
+        
+        <!-- Body -->
+        <div>
+            <h1>Page Title</h1>
+        </div>
+
+    </body>

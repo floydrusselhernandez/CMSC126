@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Animaniac - Wishlist</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="header.css" />
+        <link rel="stylesheet" type="text/css" href="wishlist.css" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <!-- Logo and Name -->
+            <div class="header-logo">
+                <a href="sample.html">
+                    <img id="Logo_White"src="res/Logo_White.png">
+                    <img id="AnimaniacTxt_White"src="res/AnimaniacTxt_White.png">
+                </a>
+            </div>
+            <!-- Explore Dropdown -->
+            <div class="explore">
+                <button class="explorebtn">Explore
+                    <div class="fas fa-caret-down" id="search-btn">
+                    </div>
+                </button>
+                <div class="explore-content">
+                    <table style="width:100%">
+                        <tr>
+                          <th><a href="sample.html"><b><u>News</u></b></a></>
+                          <th><a href="sample.html"><b><u>Gallery</u></b></a></th>
+                        </tr>
+                        <tr>
+                          <td><a href="sample.html">Release Dates</a></td>
+                          <td><a href="sample.html">Artworks</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="sample.html">Featured Articles</a></td>
+                          <td><a href="sample.html">Submit Artworks</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="sample.html">Upcoming Sale</a></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <!-- Filter -->
+            <div class="filter">
+                <select name="filter">
+                    <option value="" disabled selected hidden>Filter by</option>
+                    <option value="all">All</option>
+                    <option value="figures">Figures</option>
+                    <option value="books">Books</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="news">News</option>
+                    <option value="artworks">Artworks</option>
+                </select>
+            </div>
+            <!-- Search Bar -->
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <a href="sample.html">
+                    <div class="fas fa-search" id="search-btn">
+                    </div>
+                </a>
+            </div>
+            <!-- Icons -->
+            <div class="icons">
+                <a href="wishlist.html" class="wish">
+                    <div class="fas fa-heart" id="wishlist-btn">
+                    </div>
+                </a>
+                <a href="sample.html" class="cart">
+                    <div class="fas fa-shopping-cart" id="cart-btn">
+                    </div>
+                </a>
+                <a href="sample.html" class="notif">
+                    <div class="fas fa-bell" id="notif-btn">
+                    </div>
+                </a>
+                <a href="sample.html" class="user">
+                    <div class="fas fa-user" id="user-btn">
+                    </div>
+                </a>
+            </div>
+        </header>
+        
+        <!-- Body -->
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>MY WISHLIST</h1>
+        </div>
+        <!-- Sort By -->
+        <div class="sort-by">
+            <label for="sortdsby">Sort by:</label>
+            <select name="sortby">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+        <!-- Wishlist -->
+        <!-- Checkboxes -->
+        <div class="content-container">
+            <table class="wishitems">
+                <tr>
+                    <td class="cat" style="float: right">
+                        <div class="category">
+                            <label for="categories">Categories:</label><br>
+                            <input type="checkbox" id="books" name="categories" value="books">
+                            <label for="books">Books</label><br>
+                            <input type="checkbox" id="figures" name="categories" value="figures">
+                            <label for="figures">Figures</label><br>
+                            <input type="checkbox" id="clothing" name="categories" value="clothing">
+                            <label for="clothing">Clothing</label>
+                        </div>
+                        <div class="genre">
+                            <label for="genre"><br>By Genre:</label><br>
+                            <input type="checkbox" id="adventure" name="genre" value="adventure">
+                            <label for="adventure">Adventure</label><br>
+                            <input type="checkbox" id="action" name="genre" value="action">
+                            <label for="action">Action</label><br>
+                            <input type="checkbox" id="comedy" name="genre" value="comedy">
+                            <label for="comedy">Comedy</label><br>
+                            <input type="checkbox" id="drama" name="genre" value="drama">
+                            <label for="drama">Drama</label><br>
+                            <input type="checkbox" id="fantasy" name="genre" value="fantasy">
+                            <label for="fantasy">Fantasy</label><br>
+                            <input type="checkbox" id="horror" name="genre" value="horror">
+                            <label for="horror">Horror</label><br>
+                            <input type="checkbox" id="romance" name="genre" value="romance">
+                            <label for="romance">Romance</label><br>
+                            <input type="checkbox" id="sci-fi" name="genre" value="sci-fi">
+                            <label for="sci-fi">Sci-fi</label>
+                        </div>
+                        <div class="price">
+                            <label for="price"><br>By Price:</label><br>
+                            <input type="checkbox" id="price1" name="price" value="1-1000">
+                            <label for="price1">₱1 - ₱1,000</label><br>
+                            <input type="checkbox" id="price2" name="price" value="1001-3000">
+                            <label for="price2">₱1,001 - ₱3,000</label><br>
+                            <input type="checkbox" id="price3" name="price" value="3001-5000">
+                            <label for="price3">₱3,001 - ₱5,000</label><br>
+                            <input type="checkbox" id="price4" name="price" value="5001-10000">
+                            <label for="price4">₱5,001 - ₱10,000</label><br>
+                            <input type="checkbox" id="price5" name="price" value="10000+">
+                            <label for="price5">Over ₱10,000</label>
+                        </div>
+                    </td>  
+                    <td class="items">
+                        <div class="wishlist">
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure1.png" alt="figure1">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 1</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure2">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 2</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure3">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 3</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 4</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 4</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 4</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 4</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 4</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <h3>Figure 4</h3>
+                                    <p>₱1,000</p>
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="add-to-cart">Add to Cart</a>
+                                        <a href="#" class="remove">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
