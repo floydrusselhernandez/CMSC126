@@ -42,7 +42,7 @@ select[name="sortby"] {
     background-position: calc(100% + 5px) center;
 }
 
-.category, .genre, .price {
+.category, .genre, .prices {
     font-family: Arial;
     font-size: 20px;
     margin-left: 30px;
@@ -60,7 +60,7 @@ select[name="sortby"] {
     font-size: 25px;
 }
 
-.price [for=price] {
+.price [for=prices] {
     color: black;
     font-size: 25px;
 }
@@ -84,23 +84,24 @@ select[name="sortby"] {
 }
 
 .wishlist-img img {
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
     max-width: 250px;
-    border-radius: 10%;
-    border: 3px solid black;
     object-fit: cover;
     height: 250px;
 }
 
 .wishlist-info h3 {
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
+    max-width: 250px;
+    display: block;
+    line-height: 20px;
 }
 
 .wishlist-info {
     margin-left: 5px;
     font-family: Arial;
     font-size: 15px;
-    line-height: 10px;
+    line-height: 2px
 }
 
 .items {
@@ -112,20 +113,92 @@ select[name="sortby"] {
     margin-bottom: 50px;
     padding-bottom: 5px;
     box-shadow: 10px 10px 5px gray;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-color: #000000;
     border-radius: 10%;
 }
 
-.wishlist-btn {
-    text-align: center;
+.remove-btn {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.wishlist-img img {
-    transition: transform 0.5s;
+.remove {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+  }  
+
+.wishlist-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.star-rating {
+    padding-bottom: 5px;
+}
+
+.price {
+    border-radius: 20px; 
+    border: 2px solid black; 
+    padding: 10px;
+    display: inline-block;
+    margin: 0;
+}
+  
+.star-rating, .sold {
+    display: inline-block;
+    margin: 0px;
+}
+
+.star-rating {
+    margin-left: 90px;
+}
+
+.cart-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-btn i {
+    font-size: 30px;
+}
+
+
+.wishlist-title {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 240px;
+}
+
+.wishlist-title h3 {
+    margin: 0px;
+}
+
+.align-sold-star {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 240px;
+}
+
+.wishlist-title h3 {
+    white-space: nowrap;
+    overflow: hidden;
   }
   
-  .wishlist-img img:hover {
-    transform: scale(1.1);
-  }
+.align-price-remove {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+}
+  
