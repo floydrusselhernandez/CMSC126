@@ -48,8 +48,8 @@
                 </div>
             </div>
             <!-- Filter -->
-            <div class="filter">
-                <select name="filter">
+            <div class="filter-container">
+                <select name="filter" id="filter">
                     <option value="" disabled selected hidden>Filter by</option>
                     <option value="all">All</option>
                     <option value="figures">Figures</option>
@@ -153,16 +153,16 @@
                     </td>  
                     <td class="items">
                        <div class="wishlist">
-                            <div class="wishlist-item">
+                            <div class="wishlist-item" id="wishlist-item1">
                                 <div class="wishlist-img">
                                     <img src="images/figure1.png" alt="figure1">
                                 </div>
                                 <div class="wishlist-info">
                                     <div class="wishlist-title">
                                         <h3>SSSS.Dynazenon Mujina Non-Scale Figure</h3>
-                                        <button class="cart-btn">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </button>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-store"></i>
+                                        </a>
                                     </div>                                  
                                     <p class="ctgry">Figures</p>
                                     <div class="soldstar">
@@ -180,23 +180,23 @@
                                     </div>
                                     <div class="align-price-remove">
                                         <br>
-                                        <p class="price">₱6,000</p>
+                                        <p class="price">₱9,999</p>
                                         <div class="remove-btn">
-                                            <button class="remove">Remove from Wishlist</button>
+                                            <button onclick="openPopup()" class="remove" id="btn1">Remove from Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="wishlist-item">
+                            <div class="wishlist-item" id="wishlist-item2">
                                 <div class="wishlist-img">
                                     <img src="images/figure2.png" alt="figure2">
                                 </div>
                                 <div class="wishlist-info">
                                     <div class="wishlist-title">
                                         <h3>Moderoid SSSS.Dynazenon Dynazenon</h3>
-                                        <button class="cart-btn">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </button>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-store"></i>
+                                        </a>
                                     </div>                                  
                                     <p class="ctgry">Figures</p>
                                     <div class="soldstar">
@@ -216,23 +216,23 @@
                                     </div>
                                     <div class="align-price-remove">
                                         <br>
-                                        <p class="price">₱6,000</p>
+                                        <p class="price">₱19,499</p>
                                         <div class="remove-btn">
-                                            <button class="remove">Remove from Wishlist</button>
+                                            <button onclick="openPopup()" class="remove" id="btn2">Remove from Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="wishlist-item">
+                            <div class="wishlist-item" id="wishlist-item3">
                                 <div class="wishlist-img">
                                     <img src="images/figure3.png" alt="figure3">
                                 </div>
                                 <div class="wishlist-info">
                                     <div class="wishlist-title">
                                         <h3>Uchusen Bessatsu SSSS.Dynazenon</h3>
-                                        <button class="cart-btn">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </button>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-store"></i>
+                                        </a>
                                     </div>                                  
                                     <p class="ctgry">Books</p>
                                     <div class="soldstar">
@@ -251,23 +251,23 @@
                                     </div>
                                     <div class="align-price-remove">
                                         <br>
-                                        <p class="price">₱6,000</p>
+                                        <p class="price">₱500</p>
                                         <div class="remove-btn">
-                                            <button class="remove">Remove from Wishlist</button>
+                                            <button onclick="openPopup()" class="remove" id="btn3">Remove from Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="wishlist-item">
+                            <div class="wishlist-item" id="wishlist-item4">
                                 <div class="wishlist-img">
                                     <img src="images/figure4.png" alt="figure4">
                                 </div>
                                 <div class="wishlist-info">
                                     <div class="wishlist-title">
                                         <h3>LISTEN FLAVOR Hatsune Miku Jersey Hoodie</h3>
-                                        <button class="cart-btn">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </button>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-store"></i>
+                                        </a>
                                     </div>                                  
                                     <p class="ctgry">Clothing</p>
                                     <div class="soldstar">
@@ -285,26 +285,26 @@
                                     </div>
                                     <div class="align-price-remove">
                                         <br>
-                                        <p class="price">₱6,000</p>
+                                        <p class="price">₱1,000</p>
                                         <div class="remove-btn">
-                                            <button class="remove">Remove from Wishlist</button>
+                                            <button onclick="openPopup()" class="remove" id="btn4">Remove from Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="wishlist-item">
+                            <div class="wishlist-item" id="wishlist-item5">
                                 <div class="wishlist-img">
                                     <img src="images/figure5.png" alt="figure5">
                                 </div>
                                 <div class="wishlist-info">
                                     <div class="wishlist-title">
                                         <h3>Hatsune Miku: Rose Cage Ver. 1/7 Scale Figure</h3>
-                                        <button class="cart-btn">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </button>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-store"></i>
+                                        </a>
                                     </div>                                  
                                     <p class="ctgry">Figures</p>
-                                    <div class="soldstar">
+                                    <div class="align-sold-star">
                                         <p class="sold">30 sold</p>
                                         <div class="star-rating">
                                             <!-- Display 3 full stars -->
@@ -321,10 +321,20 @@
                                     </div>
                                     <div class="align-price-remove">
                                         <br>
-                                        <p class="price">₱6,000</p>
+                                        <p class="price">₱10,999</p>
                                         <div class="remove-btn">
-                                            <button class="remove">Remove from Wishlist</button>
+                                            <button onclick="openPopup()" class="remove" id="btn5">Remove from Wishlist</button>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="popup" class="modal">
+                                <div class="modal-content">
+                                    <p>Remove from Wishlist?</p>
+                                    <div class="button-container">
+                                        <button onclick="closePopup(true)" class="yes-btn">Yes</button>
+                                        <button onclick="closePopup(false)" class="no-btn">No</button>
                                     </div>
                                 </div>
                             </div>
