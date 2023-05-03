@@ -4,33 +4,47 @@
 <head>
 	<meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial scale = 1">
+    <link rel="icon" href="images/BlackLogo.png">
     <title>ANIMANIAC - Submit Artwork</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id=""></div>
     <header class = "header">
         <h1>ANIMANIAC</h1>
         <a href="#explore" class="btn">Explore</a>
-        <hr>
     </header>
-    <section>
-        <h1 class="submitart">SUBMIT ARTWORK</h1>
-    </section>
-    <hr>
-    <table class="submitart">
-        <form class="subart">
-            <label for="upload">Upload file</label><br>
-            <input type="file" id="upload" name="upload"><br>
-            JPEG, JPG, PNG, GIF maximum size: 50MB
-            <hr>
-            <label for="title">Artwork Title:</label><br>
-            <input type="text" id="title" name="title">
-            <hr>
-            <textarea name="description" rows="10" cols="30">Describe your artwork here...</textarea>
-            Please do not upload any copyright infringing content.
-            <input type="submit" value="Post">
-            <input type="button" value="cancel">
+
+    <div id="submit-art">
+        <hr>
+        <h1>SUBMIT ARTWORK</h1>
+        <hr>
+    </div>
+
+    <div id="submit-form">
+        <form class="form-upload">
+            <div id="file-upload">
+                <label for="upload">Upload file</label><br>
+                <input type="file" id="upload" name="upload"><br>
+                JPEG, JPG, PNG, GIF maximum size: 50MB
+                <hr>
+            </div>
+            <div id="title">
+                <label for="title">Artwork Title:</label>
+                <input type="text" id="title" name="title">
+                <hr>
+            </div>
+            <div id="description">
+                <label for="description">Description:</label><br>
+                <textarea name="description" rows="10" cols="45" placeholder="Describe your artwork here..."></textarea>
+                <br> Please do not upload any copyright infringing content.
+                <br>
+                <input type="submit" value="Post">
+                <a href="shop.html">Cancel</a>
+            </div>
         </form>
-    </table>
-    
+    </div>
+
 </body>
+</html>
