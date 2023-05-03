@@ -30,3 +30,24 @@ function removeElement() {
   element.remove();
 }
 
+let circles = document.querySelectorAll(".circle");
+let currentPage = 1;
+
+circles.forEach((circle, index) => {
+  circle.addEventListener("click", () => {
+    currentPage = index + 1;
+    updatePage();
+  });
+});
+
+function updatePage() {
+  circles.forEach((circle, index) => {
+    if (index < currentPage) {
+      circle.classList.add("active");
+    } else {
+      circle.classList.remove("active");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", updatePage);

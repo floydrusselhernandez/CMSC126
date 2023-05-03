@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Animaniac - Shop</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="header.css" />
+        <link rel="stylesheet" type="text/css" href="shop.css" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <!-- Logo and Name -->
+            <div class="header-logo">
+                <a href="#">
+                    <img id="Logo_White"src="res/Logo_White.png">
+                    <img id="AnimaniacTxt_White"src="res/AnimaniacTxt_White.png">
+                </a>
+            </div>
+            <!-- Explore Dropdown -->
+            <div class="explore">
+                <button class="explorebtn">Explore
+                    <div class="fas fa-caret-down" id="search-btn">
+                    </div>
+                </button>
+                <div class="explore-content">
+                    <table style="width:100%">
+                        <tr>
+                          <th><a href="#"><b><u>News</u></b></a></>
+                          <th><a href="#"><b><u>Gallery</u></b></a></th>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Release Dates</a></td>
+                          <td><a href="#">Artworks</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Featured Articles</a></td>
+                          <td><a href="#">Submit Artworks</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Upcoming Sale</a></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <!-- Filter -->
+            <div class="filter-container">
+                <select name="filter" id="filter">
+                    <option value="" disabled selected hidden>Filter by</option>
+                    <option value="all">All</option>
+                    <option value="figures">Figures</option>
+                    <option value="books">Books</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="news">News</option>
+                    <option value="artworks">Artworks</option>
+                </select>
+            </div>
+            <!-- Search Bar -->
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <a href="#">
+                    <div class="fas fa-search" id="search-btn">
+                    </div>
+                </a>
+            </div>
+            <!-- Icons -->
+            <div class="icons">
+                <a href="wishlist.html" class="wish">
+                    <div class="fas fa-heart" id="wishlist-btn">
+                    </div>
+                </a>
+                <a href="#" class="cart">
+                    <div class="fas fa-shopping-cart" id="cart-btn">
+                    </div>
+                </a>
+                <a href="#" class="notif">
+                    <div class="fas fa-bell" id="notif-btn">
+                    </div>
+                </a>
+                <a href="#" class="user">
+                    <div class="fas fa-user" id="user-btn">
+                    </div>
+                </a>
+            </div>
+        </header>
+        
+        <!-- Body -->
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>ALL PRODUCTS</h1>
+        </div>
+        <!-- Sort By -->
+        <div class="sort-by">
+            <label for="sortdsby">Sort by:</label>
+            <select name="sortby">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+        <!-- Wishlist -->
+        <!-- Checkboxes -->
+        <div class="content-container">
+            <table class="wishitems">
+                <tr>
+                    <td class="cat" style="float: right">
+                        <div class="category">
+                            <label for="categories">Categories:</label><br>
+                            <input type="checkbox" id="books" name="categories" value="books">
+                            <label for="books">Books</label><br>
+                            <input type="checkbox" id="figures" name="categories" value="figures">
+                            <label for="figures">Figures</label><br>
+                            <input type="checkbox" id="clothing" name="categories" value="clothing">
+                            <label for="clothing">Clothing</label>
+                        </div>
+                        <div class="genre">
+                            <label for="genre"><br>By Genre:</label><br>
+                            <input type="checkbox" id="adventure" name="genre" value="adventure">
+                            <label for="adventure">Adventure</label><br>
+                            <input type="checkbox" id="action" name="genre" value="action">
+                            <label for="action">Action</label><br>
+                            <input type="checkbox" id="comedy" name="genre" value="comedy">
+                            <label for="comedy">Comedy</label><br>
+                            <input type="checkbox" id="drama" name="genre" value="drama">
+                            <label for="drama">Drama</label><br>
+                            <input type="checkbox" id="fantasy" name="genre" value="fantasy">
+                            <label for="fantasy">Fantasy</label><br>
+                            <input type="checkbox" id="horror" name="genre" value="horror">
+                            <label for="horror">Horror</label><br>
+                            <input type="checkbox" id="romance" name="genre" value="romance">
+                            <label for="romance">Romance</label><br>
+                            <input type="checkbox" id="sci-fi" name="genre" value="sci-fi">
+                            <label for="sci-fi">Sci-fi</label>
+                        </div>
+                        <div class="prices">
+                            <label for="price"><br>By Price:</label><br>
+                            <input type="checkbox" id="price1" name="price" value="1-1000">
+                            <label for="price1">₱1 - ₱1,000</label><br>
+                            <input type="checkbox" id="price2" name="price" value="1001-3000">
+                            <label for="price2">₱1,001 - ₱3,000</label><br>
+                            <input type="checkbox" id="price3" name="price" value="3001-5000">
+                            <label for="price3">₱3,001 - ₱5,000</label><br>
+                            <input type="checkbox" id="price4" name="price" value="5001-10000">
+                            <label for="price4">₱5,001 - ₱10,000</label><br>
+                            <input type="checkbox" id="price5" name="price" value="10000+">
+                            <label for="price5">Over ₱10,000</label>
+                        </div>
+                    </td>  
+                    <td class="items">
+                       <div class="wishlist">
+                            <div class="wishlist-item" id="wishlist-item1">
+                                <div class="wishlist-img">
+                                    <img src="images/figure1.png" alt="figure1">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>SSSS.Dynazenon Mujina Non-Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱9,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item2">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure2">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Moderoid SSSS.Dynazenon Dynazenon</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">69 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <!-- <i class="far fa-star"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱19,499</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item3">
+                                <div class="wishlist-img">
+                                    <img src="images/figure3.png" alt="figure3">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Uchusen Bessatsu SSSS.Dynazenon</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Books</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item4">
+                                <div class="wishlist-img">
+                                    <img src="images/figure4.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>LISTEN FLAVOR Hatsune Miku Jersey Hoodie</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Clothing</p>
+                                    <div class="soldstar">
+                                        <p class="sold">43 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱1,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item5">
+                                <div class="wishlist-img">
+                                    <img src="images/figure5.png" alt="figure5">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Hatsune Miku: Rose Cage Ver. 1/7 Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="align-sold-star">
+                                        <p class="sold">30 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <!-- <i class="far fa-star"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱10,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item1">
+                                <div class="wishlist-img">
+                                    <img src="images/figure1.png" alt="figure1">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>SSSS.Dynazenon Mujina Non-Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱9,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item2">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure2">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Moderoid SSSS.Dynazenon Dynazenon</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">69 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <!-- <i class="far fa-star"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱19,499</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item3">
+                                <div class="wishlist-img">
+                                    <img src="images/figure3.png" alt="figure3">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Uchusen Bessatsu SSSS.Dynazenon</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Books</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item4">
+                                <div class="wishlist-img">
+                                    <img src="images/figure4.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>LISTEN FLAVOR Hatsune Miku Jersey Hoodie</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Clothing</p>
+                                    <div class="soldstar">
+                                        <p class="sold">43 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱1,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item5">
+                                <div class="wishlist-img">
+                                    <img src="images/figure5.png" alt="figure5">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Hatsune Miku: Rose Cage Ver. 1/7 Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="align-sold-star">
+                                        <p class="sold">30 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <!-- <i class="far fa-star"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱10,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item1">
+                                <div class="wishlist-img">
+                                    <img src="images/figure1.png" alt="figure1">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>SSSS.Dynazenon Mujina Non-Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱9,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item2">
+                                <div class="wishlist-img">
+                                    <img src="images/figure2.png" alt="figure2">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Moderoid SSSS.Dynazenon Dynazenon</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">69 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <!-- <i class="far fa-star"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱19,499</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item3">
+                                <div class="wishlist-img">
+                                    <img src="images/figure3.png" alt="figure3">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Uchusen Bessatsu SSSS.Dynazenon</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Books</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item4">
+                                <div class="wishlist-img">
+                                    <img src="images/figure4.png" alt="figure4">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>LISTEN FLAVOR Hatsune Miku Jersey Hoodie</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Clothing</p>
+                                    <div class="soldstar">
+                                        <p class="sold">43 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱1,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item5">
+                                <div class="wishlist-img">
+                                    <img src="images/figure5.png" alt="figure5">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>Hatsune Miku: Rose Cage Ver. 1/7 Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="align-sold-star">
+                                        <p class="sold">30 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <!-- <i class="fas fa-star-half-alt"></i> -->
+                                            <!-- Display 1 empty star -->
+                                            <!-- <i class="far fa-star"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱10,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-item" id="wishlist-item1">
+                                <div class="wishlist-img">
+                                    <img src="images/figure1.png" alt="figure1">
+                                </div>
+                                <div class="wishlist-info">
+                                    <div class="wishlist-title">
+                                        <h3>SSSS.Dynazenon Mujina Non-Scale Figure</h3>
+                                        <a href="#" class="shop-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>                                  
+                                    <p class="ctgry">Figures</p>
+                                    <div class="soldstar">
+                                        <p class="sold">21 sold</p>
+                                        <div class="star-rating">
+                                            <!-- Display 3 full stars -->
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <!-- Display a half star -->
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <!-- Display 1 empty star -->
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="align-price-remove">
+                                        <br>
+                                        <p class="price">₱9,999</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pagination">
+                                <a href="#">&laquo;</a>
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">&raquo;</a>
+                              </div>
+                              
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <div class="footer-logo">
+                <a href="#">
+                    <img id="Logo_White"src="res/Logo_White.png">
+                    <img id="AnimaniacTxt_White"src="res/AnimaniacTxt_White.png">
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
