@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Feedback</title>
+	<link rel="stylesheet" href="design.css">
+</head>
+<body>
+	<div class="popup">
+		<div class="popup-content">
+			<img id="close-button" class="popup-close" src="images/close.png">
+			<div class="popup-header">
+			<img class="rounded popup-productIcon" id="popup-productImg" src="images/product2.jpg">
+			<div class="popup-productDetails">
+				<h2 class="popup-productName" id="popup-productName">hololive English -Myth- Gawr Gura 1/7 Scale Figure</h2>
+				<h2 class="popup-productCategory" id="popup-productCategory">Figures</h2>
+				<div class="popup-tags">
+					<p class="popup-productTags" id="popup-productTags1">Variations: Goob</p>
+					<p class="popup-productTags" id="popup-productTags2">Size: One-size</p>
+				</div>
+				<div id="popup-star-rating" class="popup-rating">
+					<div class="starIcon">
+						<div class="star-rating">
+							<button class="star popup-star">&#9734;</button>
+							<button class="star popup-star">&#9734;</button>
+							<button class="star popup-star">&#9734;</button>
+							<button class="star popup-star">&#9734;</button>
+							<button class="star popup-star">&#9734;</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+			<div class="popup-reviewSubmission">
+			<textarea class="popup-reviewText" name="message" rows="12"  placeholder="Tell us more about it! (Optional)"></textarea>
+			<form class="popup-imgSubmission">
+
+			    <input id="imgSubmission" type="file" name="file">
+				<input type="submit" value="Submit"class="popup-submitReview">
+			</form>
+			</div>
+		</div>
+	</div>
+
+	<h1 class="smallerHeader">ratings & reviews center</h1>
+	<div class="tabHeaders">
+		<button  class="activeTab awaitingReview">Awaiting Review </button>
+		<button class="unactiveTab submittedReview" onclick="window.location.href ='feedbackSubmitted.html';">Submitted Review </button>
+	</div>
+
+	<div class="productReview">
+		<img class="rounded productIcon" id="productIcon1" src="images/product2.jpg">
+		<h2 class="productName" id="productName1">hololive English -Myth- Gawr Gura 1/7 Scale Figure</h2>
+		<h2 class="productCategory" id="productCategory1">Figures</h2>
+		<div class="tags">
+			<p class="productTags" id="productTags1A">Variations: Goob</p>
+			<p class="productTags" id="productTags1B">Size: One-size</p>
+		</div>
+		<div class="rating">
+			<div class="starIcon">
+				<div id="product-rating1" class="star-rating">
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+				</div>
+			</div>
+		</div>
+		<hr class="productLine">
+	</div>
+
+	<div class="productReview">
+		<img class="rounded productIcon" id="productIcon2" src="images/product5.jpg">
+		<h2 class="productName" id="productName2">Pop Up Parade Nakiri Ayame</h2>
+		<h2 class="productCategory" id="productCategory2">Figures</h2>
+		<div class="tags">
+			<p class="productTags" id="productTags2A">Variations: Yodayo</p>
+			<p class="productTags" id="productTags2B">Size: One-size</p>
+		</div>
+		<div class="rating">
+			<div class="starIcon">
+				<div id="product-rating2" class="star-rating">
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+				</div>
+			</div>
+		</div>
+		<hr class="productLine">
+	</div>
+
+	<div class="productReview">
+		<img class="rounded productIcon" id="productIcon3" src="images/product7.jpg">
+		<h2 class="productName" id="productName3">Blue Archive Neru Mikamo: Bunny Girl Ver. 1/7 Scale Figure</h2>
+		<h2 class="productCategory" id="productCategory3">Figures</h2>
+		<div class="tags">
+			<p class="productTags" id="productTags3A">Variations: Angy</p>
+			<p class="productTags" id="productTags3B">Size: Smol</p>
+		</div>
+		<div class="rating">
+			<div class="starIcon">
+				<div id="product-rating3" class="star-rating">
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+					<button class="star">&#9734;</button>
+				</div>
+			</div>
+		</div>
+		<hr class="productLine">
+	</div>
+	
+</body>
+<script type="text/javascript" src="reviewScript.js"></script>
+</html>
