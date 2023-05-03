@@ -1,0 +1,127 @@
+.delivery-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 500px;
+  }
+  
+  .delivery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .delivery-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  
+  .address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .address button {
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .address-fields {
+    display: none;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: calc(50% - 5px);
+  }
+  
+  .input-field label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-field select,
+  .input-field input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .input-field select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-512.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 16px;
+    padding-right: 20px;
+  }
+  
+  .input-field input[type="text"] {
+    width: 100%;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .shipping-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .shipping-fee .value {
+    font-weight: bold;
+  }
+  
+  .delivery-date .value {
+    font-weight: bold;
+  }
+  
+  .return-policy {
+    display: flex;
+    align-items: center;
+  }
+  
+  .return-policy-logo img,
+  .cod-logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .return-policy-text span,
+  .cod-text span {
+    font-weight: bold;
+  }
+  
+  #save-btn {
+    display: inline;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }

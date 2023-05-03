@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Animaniac - Product Page/Dropdown</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="deliveryDropdown.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="dropdown.js"></script>
+    </head>
+    <body> 
+    
+        <div class="delivery-container">
+            <div class="delivery-header">
+              <h2>Delivery</h2>
+              <div class="address">
+                Sample Address
+                <button onclick="toggleDiv()">Change</button>
+              </div>
+              <div class="address-fields" id="address-fields">
+                <div class="input-field">
+                  <label for="province">Province</label>
+                  <select id="province">
+                    <option>Choose Province</option>
+                    <option>Province 1</option>
+                    <option>Province 2</option>
+                    <option>Province 3</option>
+                  </select>
+                </div>
+                <div class="input-field">
+                  <label for="city">City</label>
+                  <select id="city">
+                    <option>Choose City</option>
+                    <option>City 1</option>
+                    <option>City 2</option>
+                    <option>City 3</option>
+                  </select>
+                </div>
+                <div class="input-field">
+                  <label for="district">District</label>
+                  <select id="district">
+                    <option>Choose District</option>
+                    <option>District 1</option>
+                    <option>District 2</option>
+                    <option>District 3</option>
+                  </select>
+                </div>
+                <div class="input-field">
+                  <label for="street">Street/Building Name</label>
+                  <input type="text" id="street" placeholder="Enter Street/Building Name">
+                </div>
+                <div class="input-field">
+                  <label for="recipient">Recipient's Name</label>
+                  <input type="text" id="recipient" placeholder="Enter Recipient's Name">
+                </div>
+                <div class="input-field">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" id="phone" placeholder="Enter Phone Number">
+                </div>
+                <button id="save-btn">Save</button>
+              </div>
+            </div>
+            <hr>
+            <div class="shipping-details">
+              <div class="shipping-fee">
+                <span class="label">Shipping fee:</span>
+                <span class="value">120 pesos</span>
+              </div>
+              <div class="delivery-date">
+                <span class="label">Estimated delivery date:</span>
+                <span class="value">May 10, 2023</span>
+              </div>
+            </div>
+            <hr>
+            <div class="return-policy">
+              <div class="return-policy-logo">
+                <img src="return-policy-logo.png" alt="Return Policy Logo">
+              </div>
+              <div class="return-policy-text">
+                <span>30 Day Return Policy</span>
+              </div>
+              <div class="cod-logo">
+                <img src="cod-logo.png" alt="COD Logo">
+              </div>
+              <div class="cod-text">
+                <span>COD Available</span>
+              </div>
+            </div>
+          </div>
+          
+        
+    </body>
+</html>
