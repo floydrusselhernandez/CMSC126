@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2023 at 07:42 AM
+-- Generation Time: May 21, 2023 at 10:00 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -63,7 +63,7 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_img`, `description`, `price`, `category_id`, `sold`) VALUES
 (1, 'SSSS.Dynazenon Mujina Non-Scale Figure', 'res/products/figure1.png', 'Lorem Ipsum', 9999.00, 2, 0),
-(2, 'Moderoid SSSS.Dynazenon Dynazenon', 'res/products/figure2.png', 'Lorem Ipsum', 19499.00, 2, 0),
+(2, 'Moderoid SSSS.Dynazenon Dynazenon', 'res/products/figure2.png', 'Lorem Ipsum', 9499.00, 2, 0),
 (3, 'Uchusen Bessatsu SSSS.Dynazenon', 'res/products/figure3.png', 'Lorem Ipsum', 500.00, 1, 0),
 (4, 'LISTEN FLAVOR Hatsune Miku Jersey Hoodie', 'res/products/figure4.png', 'Lorem Ipsum', 1000.00, 3, 0);
 
@@ -115,6 +115,29 @@ INSERT INTO `user` (`user_id`, `username`, `email`) VALUES
 (3, 'DavidBrown', 'davidbrown@example.com'),
 (4, 'EmilyJohnson', 'emilyjohnson@example.com');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wishlist`
+--
+
+CREATE TABLE `wishlist` (
+  `wishlist_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `added_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `wishlist`
+--
+
+INSERT INTO `wishlist` (`wishlist_id`, `user_id`, `product_id`, `added_date`) VALUES
+(3, 1, 1, '2023-05-21 06:52:01'),
+(4, 1, 4, '2023-05-21 07:46:54'),
+(5, 1, 2, '2023-05-21 07:46:54'),
+(8, 1, 3, '2023-05-21 07:48:06');
+
 --
 -- Indexes for dumped tables
 --
@@ -144,6 +167,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  ADD PRIMARY KEY (`wishlist_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -164,6 +193,12 @@ ALTER TABLE `review`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
