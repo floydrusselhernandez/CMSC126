@@ -1,4 +1,7 @@
-<?php include 'DBConnector.php'; ?>
+<?php
+include 'sort.php';
+$selectedOption = $_GET['sortby'] ?? 'newest'; // Default sorting option
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +27,19 @@
     <!-- Sort By -->
     <div class="sort-by">
         <label for="sortby">Sort by:</label>
-        <select name="sortby">
-            <option value="newest">Newest</option>
-            <option value="oldest">Oldest</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
+        <select name="sortby" onchange="location = this.value;">
+            <option value="wishlist.php?sortby=newest" <?php if ($selectedOption === 'newest') echo 'selected'; ?>>
+                Newest
+            </option>
+            <option value="wishlist.php?sortby=oldest" <?php if ($selectedOption === 'oldest') echo 'selected'; ?>>
+                Oldest
+            </option>
+            <option value="wishlist.php?sortby=price-low" <?php if ($selectedOption === 'price-low') echo 'selected'; ?>>
+                Price: Low to High
+            </option>
+            <option value="wishlist.php?sortby=price-high" <?php if ($selectedOption === 'price-high') echo 'selected'; ?>>
+                Price: High to Low
+            </option>
         </select>
     </div>
 
@@ -36,7 +47,8 @@
     <div class="content-container">
         <table class="wishitems">
             <tr>
-            <td class="cat" style="float: right">
+                <td class="cat" style="float: right">
+                    <!-- Your filter checkboxes code here -->
                     <div class="category">
                         <label for="categories">Categories:</label><br>
                         <input type="checkbox" id="books" name="categories" value="books">
@@ -78,20 +90,18 @@
                         <input type="checkbox" id="price5" name="price" value="10000+">
                         <label for="price5">Over ₱10,000</label>
                     </div>
+                    <!-- Apply Filter Button -->
+                    <div class="apply-filter">
+                        <button id="apply-filter-btn" class="apply-filter-btn" onclick="applyFilter()">Apply Filter</button>
+                    </div>
                 </td>
                 <td class="items">
                     <div class="wishlist">
                         <?php
-                        // Retrieve wishlist items from the database
-                        $user_id = 1; // Replace '1' with the desired user ID
-                        $sql = "SELECT p.product_id, p.product_name, p.price, p.product_img, AVG(r.rating) AS average_rating, c.category_name
-                                FROM product p
-                                INNER JOIN wishlist w ON p.product_id = w.product_id
-                                INNER JOIN category c ON p.category_id = c.category_id
-                                LEFT JOIN review r ON p.product_id = r.product_id
-                                WHERE w.user_id = $user_id
-                                GROUP BY p.product_id";
-                        $result = $conn->query($sql);
+                        $sortBy = $_GET['sortby'] ?? 'newest'; // Default sorting option
+
+                        // Apply sorting and retrieve the sorted result
+                        $result = applySorting($sortBy);
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
@@ -174,6 +184,7 @@
 
     <!-- Footer -->
     <?php include 'footer.php'; ?>
+    <script src="js/wishlist.js"></script>
 </body>
 
 </html>

@@ -29,8 +29,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: auto;
-    position: fixed;
-    width: 100%;
     bottom: 0;
 }
 

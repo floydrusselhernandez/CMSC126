@@ -62,9 +62,27 @@ select[name="sortby"] {
   font-size: 25px;
 }
 
-.price [for=prices] {
+.prices [for=price] {
   color: black;
   font-size: 25px;
+}
+
+.apply-filter-btn {
+  background-color: #000000; /* Update background color */
+  color: #ffffff; /* Update text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Update border radius */
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.apply-filter-btn:hover {
+  background-color: #555555; /* Update hover background color */
+  color: #ffffff; /* Update hover text color */
 }
 
 .wish-container {
@@ -85,12 +103,19 @@ select[name="sortby"] {
   margin-right: 30px;
 }
 
+.wishlist-img {
+  display: block;
+}
+
 .wishlist-img img {
+  margin: 0 auto;
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
-  max-width: 100%;
+  max-width: 250px;
   object-fit: cover;
   height: 250px;
+  display: block;
+  margin: auto;
 }
 
 .wishlist-info h3 {
@@ -100,7 +125,7 @@ select[name="sortby"] {
 }
 
 .wishlist-info {
-  margin-left: 5px;
+  /* margin-left: 5px; */
   font-family: Arial;
   font-size: 15px;
   line-height: 2px;
