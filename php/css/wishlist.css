@@ -161,9 +161,10 @@ input[type="radio"]:checked::before {
   margin: 0 auto;
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
-  max-width: 250px;
+  max-width: 260px;
   object-fit: cover;
   height: 250px;
+  width: 260px;
   display: block;
   margin: auto;
 }
@@ -175,6 +176,7 @@ input[type="radio"]:checked::before {
 }
 
 .wishlist-info {
+  margin-left: 7px;
   font-family: Arial;
   font-size: 15px;
   line-height: 2px;
@@ -240,6 +242,7 @@ input[type="radio"]:checked::before {
   border: none;
   cursor: pointer;
   padding: 4px;
+  color: black;
 }
 
 .shop-btn i {
