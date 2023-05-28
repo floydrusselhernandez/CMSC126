@@ -23,6 +23,7 @@ $result = applySorting($selectedOption, $selectedCategories, $selectedGenres);
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/wishlist.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="res/logo1.png">
     <script src="js/wishlist.js"></script>
     <title>My Wishlist</title>
 </head>
