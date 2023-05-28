@@ -12,9 +12,8 @@
 .sort-by {
   font-family: Arial;
   font-size: 20px;
-  margin-right: 30px;
-  text-align: right;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .sortby {
@@ -42,9 +41,51 @@ select[name="sortby"] {
   background-position: calc(100% + 5px) center;
 }
 
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked {
+  background-color: #000;
+}
+
+input[type="radio"]:focus {
+  outline: none;
+}
+
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+  opacity: 1;
+}
+
+.category {
+  margin-top: 30px;
+}
+
 .category,
-.genre,
-.prices {
+.genre {
   font-family: Arial;
   font-size: 20px;
   margin-left: 30px;
@@ -62,27 +103,35 @@ select[name="sortby"] {
   font-size: 25px;
 }
 
-.prices [for=price] {
-  color: black;
-  font-size: 25px;
-}
-
-.apply-filter-btn {
-  background-color: #000000; /* Update background color */
-  color: #ffffff; /* Update text color */
-  padding: 10px 20px;
+.apply-filter-btn,
+.reset-filter-btn,
+.yes-btn,
+.no-btn,
+.ok-btn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 10px;
   border: none;
-  border-radius: 5px; /* Update border radius */
+  border-radius: 5px;
   cursor: pointer;
   font-family: Arial;
   font-size: 16px;
   margin-left: 30px;
   margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.apply-filter-btn:hover {
-  background-color: #555555; /* Update hover background color */
-  color: #ffffff; /* Update hover text color */
+.apply-filter-btn:hover,
+.reset-filter-btn:hover,
+.yes-btn:hover,
+.no-btn:hover,
+.ok-btn:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.reset-filter-btn {
+  margin-bottom: 50px;
 }
 
 .wish-container {
@@ -101,6 +150,7 @@ select[name="sortby"] {
   justify-content: left;
   margin-top: 20px;
   margin-right: 30px;
+  margin-left: 75px;
 }
 
 .wishlist-img {
@@ -125,7 +175,6 @@ select[name="sortby"] {
 }
 
 .wishlist-info {
-  /* margin-left: 5px; */
   font-family: Arial;
   font-size: 15px;
   line-height: 2px;
@@ -244,6 +293,7 @@ select[name="sortby"] {
 }
 
 .modal-content {
+  padding-top: 15px;
   background-color: #fefefe;
   margin: 15% auto;
   padding-bottom: 15px;
@@ -293,4 +343,35 @@ select[name="sortby"] {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+}
+
+.apply-filter-btn,
+.reset-filter-btn,
+.yes-btn,
+.no-btn,
+.ok-btn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.apply-filter-btn:hover,
+.reset-filter-btn:hover,
+.yes-btn:hover,
+.no-btn:hover,
+.ok-btn:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.noItems {
+  padding: 50px ;
+  font-size: 50px;
+  color: black;
+  font-family: Impact;
+  
+}
+
+.filterby{
+  color: black;
+  font-family: Arial;
+  font-size: 20px;
 }

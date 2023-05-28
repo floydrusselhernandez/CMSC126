@@ -31,18 +31,6 @@
     </div>
 
     <div class="search-filter-container">
-        <!-- Filter -->
-        <div class="filter-container">
-            <select name="filter" id="filter">
-                <option value="" disabled selected hidden>Filter by</option>
-                <option value="all">All</option>
-                <option value="figures">Figures</option>
-                <option value="books">Books</option>
-                <option value="clothing">Clothing</option>
-                <option value="news">News</option>
-                <option value="artworks">Artworks</option>
-            </select>
-        </div>
         <!-- Search Bar -->
         <div class="search">
             <input type="text" placeholder="Search...">

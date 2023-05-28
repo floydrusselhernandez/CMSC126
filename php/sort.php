@@ -7,7 +7,6 @@ function applySorting($sortBy)
     // Initialize filter conditions
     $genreFilter = "";
     $categoryFilter = "";
-    $priceFilter = "";
 
     // Check if genre filter is selected
     if (isset($_GET['genre'])) {
@@ -19,27 +18,6 @@ function applySorting($sortBy)
     if (isset($_GET['categories'])) {
         $selectedCategories = (array)$_GET['categories']; // Cast the value to an array
         $categoryFilter = "AND c.category_name IN ('" . implode("','", $selectedCategories) . "')";
-    }
-
-    // Check if price filter is selected
-    if (isset($_GET['price'])) {
-        $selectedPrice = $_GET['price'];
-        $priceFilter = "AND p.price BETWEEN " . getPriceRange($selectedPrice);
-    }
-
-    // Define the price ranges based on the selected price filter
-    function getPriceRange($priceFilter)
-    {
-        switch ($priceFilter) {
-            case "low":
-                return "0.00 AND 100.00";
-            case "medium":
-                return "100.01 AND 500.00";
-            case "high":
-                return "500.01 AND 10000.00";
-            default:
-                return "0.00 AND 10000.00";
-        }
     }
 
     include 'DBConnector.php';
@@ -54,7 +32,6 @@ function applySorting($sortBy)
             WHERE w.user_id = $user_id
             $genreFilter
             $categoryFilter
-            $priceFilter
             GROUP BY p.product_id";
 
     // Sorting based on selected option
@@ -80,4 +57,5 @@ function applySorting($sortBy)
     // Return the sorted result
     return $result;
 }
+
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2023 at 10:51 AM
+-- Generation Time: May 28, 2023 at 04:43 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -92,7 +92,7 @@ INSERT INTO `product` (`product_id`, `product_name`, `product_img`, `description
 (3, 'Uchusen Bessatsu SSSS.Dynazenon', 'res/products/figure3.png', 'From the tag team of Tsuburaya Productions and TRIGGER comes a mook that serves as the perfect compendium to their new generation robot anime SSSS.Dynazenon! Spanning 95 pages, Uchusen Bessatsu SSSS.Dynazenon features must-see content spanning the entire ', 500.00, 1, 0),
 (4, 'LISTEN FLAVOR Hatsune Miku Jersey Hoodie', 'res/products/figure4.png', 'Introducing a collaboration between Harajuku fashion brand LISTEN FLAVOR and Vocaloid Hatsune Miku! Available in a unisex free size in either black or emerald, this 100% polyester hoodie has a two-tone design with turquoise accents, a double zipper up the', 1000.00, 3, 0),
 (5, 'Nendoroid Death Note L 2.0 (Re-run)', 'res/products/figure5.png', 'The world-renowned detective in search of Kira returns to the world of Nendoroid!\r\nFrom the popular anime series Death Note comes L looking as disheveled and languid as ever in chibi form. An all-new updated version over the previous release, he comes wit', 2520.45, 2, 0),
-(6, 'To Love-Ru Darkness Tearju Lunatique: Swimsuit Ver', 'res/products/figure6.png', 'Tearju is ready for a day at the beach in a tiny two-piece bikini!\r\nFrom the popular anime To Love-Ru Darkness comes a 1/4 scale figure of Tearju Lunatique in a bikini! Based on artwork by Kentaro Yabuki, sculptor Akabeko has faithfully captured all of Ma', 15850.69, 2, 0);
+(6, 'To Love-Ru Darkness Tearju Lunatique: Swimsuit Ver', 'res/products/figure6.png', 'Tearju is ready for a day at the beach in a tiny two-piece bikini!\r\nFrom the popular anime To Love-Ru Darkness comes a 1/4 scale figure of Tearju Lunatique in a bikini! Based on artwork by Kentaro Yabuki, sculptor Akabeko has faithfully captured all of Ma', 5850.69, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -119,10 +119,11 @@ INSERT INTO `product_genre` (`product_id`, `genre_id`) VALUES
 (3, 1),
 (3, 2),
 (3, 7),
-(4, 6),
+(4, 5),
 (5, 1),
 (5, 4),
 (5, 5),
+(5, 6),
 (6, 2),
 (6, 3),
 (6, 7);
@@ -199,10 +200,10 @@ CREATE TABLE `wishlist` (
 INSERT INTO `wishlist` (`wishlist_id`, `user_id`, `product_id`, `added_date`) VALUES
 (3, 1, 1, '2023-05-21 06:52:01'),
 (8, 1, 3, '2023-05-21 07:48:06'),
-(10, 1, 2, '2023-05-25 06:52:37'),
 (11, 1, 4, '2023-05-25 06:52:37'),
 (14, 1, 5, '2023-05-01 03:46:59'),
-(15, 1, 6, '2023-04-12 00:39:59');
+(16, 1, 6, '2023-05-27 06:08:45'),
+(17, 1, 2, '2023-05-27 06:08:45');
 
 --
 -- Indexes for dumped tables
@@ -277,7 +278,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
