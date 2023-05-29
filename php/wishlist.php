@@ -12,6 +12,21 @@ $selectedGenres = isset($_GET['genre']) ? $_GET['genre'] : [];
 
 // Apply sorting and retrieve the sorted and filtered result
 $result = applySorting($selectedOption, $selectedCategories, $selectedGenres);
+
+// Pagination variables
+$itemsPerPage = 8;
+$totalItems = $result->num_rows;
+$totalPages = ceil($totalItems / $itemsPerPage);
+
+// Retrieve the current page number
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
+
+// Calculate the offset for the database query
+$offset = ($page - 1) * $itemsPerPage;
+
+// Apply pagination to the result query
+$sql = $result->fetch_all(MYSQLI_ASSOC);
+$paginatedResult = array_slice($sql, $offset, $itemsPerPage);
 ?>
 
 <!DOCTYPE html>
@@ -98,13 +113,9 @@ $result = applySorting($selectedOption, $selectedCategories, $selectedGenres);
                 <td class="items">
                     <div class="wishlist">
                         <?php
-                        $sortBy = $_GET['sortby'] ?? 'newest'; // Default sorting option
-
-                        // Apply sorting and retrieve the sorted result
-                        $result = applySorting($selectedOption, $selectedCategories, $selectedGenres);
-
+                        // Wishlist items loop
                         if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
+                            foreach ($paginatedResult as $row) {
                                 $productId = $row['product_id'];
                                 $productName = $row['product_name'];
                                 $price = $row['price'];
@@ -173,14 +184,58 @@ $result = applySorting($selectedOption, $selectedCategories, $selectedGenres);
                                 </div>';
                             }
                         } else {
-                            echo '<p class="noItems">No items in your wishlist.</p>';
+                            $shopLink = "shop.php";
+                            echo '<p class="noItems">No items in your wishlist. Find more in <a href="<?php echo $shopLink; ?>"class="findMore">Shop</a>.</p>';
                         }
                         ?>
                     </div>
                 </td>
             </tr>
         </table>
+        <!-- Pagination -->
+        <?php if ($totalPages > 1) : ?>
+            <div class="pagination">
+                <?php if ($page > 1) : ?>
+                    <?php $prevPageUrl = updateUrlParam('page', $page - 1); ?>
+                    <a href="<?php echo $prevPageUrl; ?>" class="prev">Previous</a>
+                <?php else: ?>
+                    <span class="prev disabled">Previous</span>
+                <?php endif; ?>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                    <?php $pageUrl = updateUrlParam('page', $i); ?>
+                    <a href="<?php echo $pageUrl; ?>" class="<?php echo ($page === $i) ? 'active' : ''; ?>"><?php echo $i; ?></a>
+                <?php endfor; ?>
+
+                <?php if ($page < $totalPages) : ?>
+                    <?php $nextPageUrl = updateUrlParam('page', $page + 1); ?>
+                    <a href="<?php echo $nextPageUrl; ?>" class="next">Next</a>
+                <?php else: ?>
+                    <span class="next disabled">Next</span>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
+    <?php
+    // Helper function to update or add a query parameter to the current URL
+    function updateUrlParam($paramName, $paramValue) {
+        $url = $_SERVER['REQUEST_URI'];
+        $urlParts = parse_url($url);
+
+        if (isset($urlParts['query'])) {
+            parse_str($urlParts['query'], $queryParams);
+        } else {
+            $queryParams = array();
+        }
+
+        $queryParams[$paramName] = $paramValue;
+        $updatedQuery = http_build_query($queryParams);
+
+        $updatedUrl = $urlParts['path'] . '?' . $updatedQuery;
+
+        return $updatedUrl;
+    }
+    ?>
 
     <!-- Footer -->
     <?php include 'footer.php'; ?>

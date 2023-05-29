@@ -65,6 +65,12 @@ function applySort() {
   // Update the sort by parameter
   urlParams.set('sortby', sortBy);
 
+  // Get the existing pagenum parameter
+  var pageNum = getParameterByName('pagenum');
+  if (pageNum) {
+    urlParams.set('pagenum', pageNum);
+  }
+
   // Redirect to the updated URL
   location.href = 'wishlist.php?' + urlParams.toString();
 }
@@ -78,6 +84,9 @@ function resetFilter() {
 
   // Remove the 'genre' parameter
   urlParams.delete('genre');
+
+  // Remove the 'page' parameter or set it to 1
+  urlParams.set('page', 1);
 
   // Reload the page with the updated URL
   window.location.href = window.location.pathname + '?' + urlParams.toString();
@@ -93,6 +102,9 @@ function applyFilter() {
   // Get the existing sortby parameter from the URL
   var existingSortBy = getParameterByName('sortby');
 
+  // Get the existing pagenum parameter
+  var pageNum = getParameterByName('pagenum');
+
   // Construct the filter URL with selected options
   var filterUrl = 'wishlist.php?sortby=' + encodeURIComponent(existingSortBy);
 
@@ -102,6 +114,10 @@ function applyFilter() {
 
   if (selectedGenres.length > 0) {
     filterUrl += '&genre=' + encodeURIComponent(selectedGenres.join(','));
+  }
+
+  if (pageNum) {
+    filterUrl += '&pagenum=' + encodeURIComponent(pageNum);
   }
 
   // Redirect to the filtered wishlist
@@ -135,27 +151,26 @@ function initializeFilters() {
   var selectedCategories = getParameterByName('categories');
 
   // Check the selected genre checkboxes
-if (selectedGenres) {
-  var genres = selectedGenres.split(",");
-  var genreCheckboxes = document.querySelectorAll('input[name="genre"]');
-  genreCheckboxes.forEach(function (checkbox) {
-    if (genres.includes(checkbox.value)) {
-      checkbox.checked = true;
-    }
-  });
-}
+  if (selectedGenres) {
+    var genres = selectedGenres.split(",");
+    var genreCheckboxes = document.querySelectorAll('input[name="genre"]');
+    genreCheckboxes.forEach(function (checkbox) {
+      if (genres.includes(checkbox.value)) {
+        checkbox.checked = true;
+      }
+    });
+  }
 
-// Check the selected category checkboxes
-if (selectedCategories) {
-  var categories = selectedCategories.split(",");
-  var categoryCheckboxes = document.querySelectorAll('input[name="categories"]');
-  categoryCheckboxes.forEach(function (checkbox) {
-    if (categories.includes(checkbox.value)) {
-      checkbox.checked = true;
-    }
-  });
-}
-
+  // Check the selected category checkboxes
+  if (selectedCategories) {
+    var categories = selectedCategories.split(",");
+    var categoryCheckboxes = document.querySelectorAll('input[name="categories"]');
+    categoryCheckboxes.forEach(function (checkbox) {
+      if (categories.includes(checkbox.value)) {
+        checkbox.checked = true;
+      }
+    });
+  }
 }
 
 // Initialize the filters on page load

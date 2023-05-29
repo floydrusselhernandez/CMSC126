@@ -57,5 +57,3 @@ function applySorting($sortBy)
     // Return the sorted result
     return $result;
 }
-
-?>
