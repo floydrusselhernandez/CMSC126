@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2023 at 04:10 PM
+-- Generation Time: Jun 01, 2023 at 05:31 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `animaniac`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `cart_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `cart_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `user_id`, `product_id`, `cart_date`) VALUES
+(4, 1, 13, '2023-05-31 19:19:15'),
+(5, 1, 18, '2023-05-31 19:19:15'),
+(6, 1, 3, '2023-05-31 19:19:15');
 
 -- --------------------------------------------------------
 
@@ -268,48 +290,35 @@ CREATE TABLE `wishlist` (
   `wishlist_id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
-  `added_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `wish_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `wishlist`
 --
 
-INSERT INTO `wishlist` (`wishlist_id`, `user_id`, `product_id`, `added_date`) VALUES
-(3, 1, 1, '2023-05-21 06:52:01'),
-(8, 1, 3, '2023-05-21 07:48:06'),
+INSERT INTO `wishlist` (`wishlist_id`, `user_id`, `product_id`, `wish_date`) VALUES
+(3, 1, 1, '2023-05-29 06:52:01'),
 (11, 1, 4, '2023-05-25 06:52:37'),
-(14, 1, 5, '2023-05-01 03:46:59'),
 (17, 1, 2, '2023-05-27 06:08:45'),
 (19, 1, 7, '2023-05-16 06:54:04'),
-(20, 1, 8, '2023-05-17 06:54:04'),
-(21, 1, 9, '2023-05-01 06:54:04'),
-(22, 1, 10, '2023-05-27 06:54:04'),
-(23, 1, 11, '2023-05-21 06:54:04'),
 (24, 1, 12, '2023-05-28 06:54:47'),
-(25, 1, 6, '2023-05-28 06:57:19'),
-(26, 1, 13, '2023-05-11 09:38:32'),
-(27, 1, 14, '2023-05-15 09:38:32'),
-(28, 1, 15, '2023-05-20 09:38:32'),
-(29, 1, 16, '2023-05-28 09:39:23'),
-(30, 1, 17, '2023-05-15 09:38:32'),
 (31, 1, 18, '2023-05-11 09:38:32'),
-(32, 1, 19, '2023-05-05 13:41:02'),
-(33, 1, 20, '2023-05-10 13:41:02'),
 (34, 1, 21, '2023-05-20 13:41:02'),
 (35, 1, 22, '2023-05-27 13:41:02'),
-(36, 1, 23, '2023-05-28 13:41:02'),
-(37, 1, 24, '2023-05-16 13:41:02'),
-(38, 1, 25, '2023-05-11 14:01:23'),
-(39, 1, 26, '2023-05-17 14:01:23'),
 (40, 1, 27, '2023-05-16 14:01:23'),
-(41, 1, 28, '2023-05-14 14:01:23'),
 (42, 1, 29, '2023-05-27 14:01:23'),
-(43, 1, 30, '2023-05-28 14:01:23');
+(45, 1, 13, '2023-06-01 03:24:32');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`cart_id`);
 
 --
 -- Indexes for table `category`
@@ -359,6 +368,12 @@ ALTER TABLE `wishlist`
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
@@ -380,7 +395,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- Constraints for dumped tables
