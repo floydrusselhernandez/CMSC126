@@ -37,10 +37,10 @@ function applySorting($sortBy)
     // Sorting based on selected option
     switch ($sortBy) {
         case "newest":
-            $sql .= " ORDER BY w.added_date DESC";
+            $sql .= " ORDER BY w.wish_date DESC";
             break;
         case "oldest":
-            $sql .= " ORDER BY w.added_date ASC";
+            $sql .= " ORDER BY w.wish_date ASC";
             break;
         case "price-low":
             $sql .= " ORDER BY p.price ASC";
@@ -49,7 +49,7 @@ function applySorting($sortBy)
             $sql .= " ORDER BY p.price DESC";
             break;
         default:
-            $sql .= " ORDER BY w.added_date DESC";
+            $sql .= " ORDER BY w.wish_date DESC";
     }
 
     $result = $conn->query($sql);

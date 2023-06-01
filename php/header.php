@@ -45,7 +45,7 @@
         <a href="wishlist.php" class="wish">
             <div class="fas fa-heart" id="wishlist-btn"></div>
         </a>
-        <a href="shop.php" class="cart">
+        <a href="cart.php" class="cart">
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
         </a>
         <a href="feedbackAwaiting.php" class="notif">

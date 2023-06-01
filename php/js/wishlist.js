@@ -22,7 +22,7 @@ function closePopup(productId, confirmed) {
         }
       }
     };
-    xmlhttp.open("GET", "update_wishlist.php?remove=" + productId, true);
+    xmlhttp.open("GET", "remove_from_wishlist.php?remove=" + productId, true);
     xmlhttp.send();
   }
 }
