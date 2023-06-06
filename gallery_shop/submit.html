@@ -4,33 +4,123 @@
 <head>
 	<meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial scale = 1">
+    <link rel="icon" href="images/BlackLogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <title>ANIMANIAC - Submit Artwork</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 
 <body>
-    <header class = "header">
-        <h1>ANIMANIAC</h1>
-        <a href="#explore" class="btn">Explore</a>
-        <hr>
+     <!-- Header -->
+     <header class="main-header" id="top">
+        <div class="logo-explore-container">
+            <!-- Logo and Name -->
+            <div class="header-logo">
+                <a href="home.html">
+                    <img id="Logo_White" src="res/Logo_White.png">
+                    <img id="AnimaniacTxt_White" src="res/AnimaniacTxt_White.png">
+                </a>
+            </div>
+            <!-- Explore Dropdown -->
+            <div class="explore">
+                <button class="explorebtn">Explore
+                    <div class="fas fa-caret-down" id="search-btn"></div>
+                </button>
+                <div class="explore-content">
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="gallery.html"><b><u>Gallery</u></b></a></th>
+                            <th><a href="news.html"><b><u>News</u></b></a></th>
+                        </tr>
+                        <tr>
+                            <td><a href="special.html">Artist</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="submit.html">Submit Artworks</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-filter-container">
+            <!-- Filter -->
+            <div class="filter-container">
+                <select name="filter" id="filter">
+                    <option value="" disabled selected hidden>Filter by</option>
+                    <option value="all">All</option>
+                    <option value="figures">Figures</option>
+                    <option value="books">Books</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="news">News</option>
+                    <option value="artworks">Artworks</option>
+                </select>
+            </div>
+            <!-- Search Bar -->
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <a href="#">
+                    <div class="fas fa-search" id="search-btn"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons">
+            <a href="wishlist.html" class="wish">
+                <div class="fas fa-heart" id="wishlist-btn"></div>
+            </a>
+            <a href="shop.html" class="cart">
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            </a>
+            <a href="feedbackAwaiting.html" class="notif">
+                <div class="fas fa-bell" id="notif-btn"></div>
+            </a>
+            <a href="#" class="user">
+                <div class="fas fa-user" id="user-btn"></div>
+            </a>
+        </div>
     </header>
-    <section>
-        <h1 class="submitart">SUBMIT ARTWORK</h1>
-    </section>
-    <hr>
-    <table class="submitart">
-        <form class="subart">
-            <label for="upload">Upload file</label><br>
-            <input type="file" id="upload" name="upload"><br>
-            JPEG, JPG, PNG, GIF maximum size: 50MB
-            <hr>
-            <label for="title">Artwork Title:</label><br>
-            <input type="text" id="title" name="title">
-            <hr>
-            <textarea name="description" rows="10" cols="30">Describe your artwork here...</textarea>
-            Please do not upload any copyright infringing content.
-            <input type="submit" value="Post">
-            <input type="button" value="cancel">
+
+
+    <div id="submit-art">
+        <hr>
+        <h1>SUBMIT ARTWORK</h1>
+        <hr>
+    </div>
+
+    <div id="submit-form">
+        <form class="form-upload">
+            <div id="file-upload">
+                <label for="upload">Upload file</label><br>
+                <input type="file" id="upload" name="upload"><br>
+                JPEG, JPG, PNG, GIF maximum size: 50MB
+                <hr>
+            </div>
+            <div id="title">
+                <label for="title">Artwork Title:</label>
+                <input type="text" id="artwork-title" name="title">
+                <hr>
+            </div>
+            <div id="description">
+                <label for="description">Description:</label><br>
+                <textarea name="description" rows="10" cols="45" placeholder="Describe your artwork here..."></textarea>
+                <br> Please do not upload any copyright infringing content.
+                <br>
+                <input type="submit" value="Post">
+                <a href="shop.html">Cancel</a>
+            </div>
         </form>
-    </table>
-    
+    </div>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="#top" class="footer-logo-link">
+                <img id="Logo_White" src="res/Logo_White.png">
+                <img id="AnimaniacTxt_White" src="res/AnimaniacTxt_White.png">
+            </a>
+        </div>
+    </footer>
 </body>
+</html>
