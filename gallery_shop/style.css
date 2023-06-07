@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html{
     background-color: rgb(179, 174, 174);
     font-family: Century Gothic;
@@ -6,14 +10,14 @@ html{
 .gallery{
     font-weight: bolder;
     font-size: x-large;
-    font-family: Century Gothic;
+    font-family: Poppins;
     text-align: center;
 }
 /* Submit Button */
 .submit a:link, a:visited{
     padding: 15px 25px;
     margin-left: 30px;
-    font-family: 'Century Gothic';
+    font-family: Poppins;
     background-color: #7c7c7c;
     color: #000000;
     display: inline-block;
@@ -32,18 +36,35 @@ html{
   background-color: #000000;
   color: #ffffff;
 }
+#submit-form{
+  background-image: url(images/submit-cover.png);
+}
 .form-upload{
+  margin: 10px;
   border: 3px solid #ffffff;
   border-radius: 5px;
-
+  width: 500px;
+  background: rgba(255, 255, 255, 0.5);
 }
+
+label[for="upload"]{
+  padding: 15px;
+  text-align: left;
+  font-size: x-large;
+}
+textarea[name="description"]{
+  padding: 10px;
+  align-self: center;
+}
+
 #file-upload, #title, #description {
   padding-left: 10px;
   font-weight: bold;
   font-size: larger;
   border-radius: 5px;
+  text-align: center;
 }
-textarea[name="description"]{
+textarea[name="description"], input[type="submit"], input[id="upload"]{
   border-radius: 5px;
   font-family: Century Gothic;
 }
@@ -62,7 +83,7 @@ input[type="file"], input[type="submit"], a[href="shop.html"]{
 
 /* Navbar for Featured, Best, Random, and Special Creators */
 .navbar{
-    font-family: 'Century Gothic';
+    font-family: 'Poppins';
     font-size: medium;
     text-align: center;
     background-color: black;
@@ -71,7 +92,7 @@ input[type="file"], input[type="submit"], a[href="shop.html"]{
 .navbar a:link, .navbar a:visited{
     padding: 15px 25px;
     margin-left: 30px;
-    font-family: 'Century Gothic';
+    font-family: 'Poppins';
     color: #ffffff;
     display: inline-block;
     text-decoration: none;
@@ -92,7 +113,12 @@ input[type="file"], input[type="submit"], a[href="shop.html"]{
   width: 100%;
   gap: 10px;
   padding: 0 4px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.image img:hover{
+  outline: invert;
+  box-shadow: 0px 0px 20px black;
 }
 
 .image img{
@@ -102,22 +128,6 @@ input[type="file"], input[type="submit"], a[href="shop.html"]{
   height: 200px;
   border-radius: 5px;
 }
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px){
-  .image{
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px){
-  .image{
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px){
   .image{
@@ -181,10 +191,10 @@ label[class="artist-name"]{
   text-align: center;
   padding-top: 1px;
 }
-.shop-item img{
+.shop-item img, .product-views img{
   border-radius: 5px;
-  width: 450px;
-  height: 450px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   display: flexbox;
   margin: 10px;
