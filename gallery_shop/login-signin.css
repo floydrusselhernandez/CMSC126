@@ -4,9 +4,11 @@
   
 html{
       background-color: rgb(179, 174, 174);
+      background-image: url(images/submit-cover.png);
       font-family: Poppins;
 }
 .signin{
+    align-content: flex-start;
     margin: 10px;
     width: 600px;
     height: 450px;
@@ -14,6 +16,7 @@ html{
     border-radius: 5px;
     display: flex;
     margin: auto;
+    background: rgba(255, 255, 255, 0.6)
 }
 .login{
     margin: 10px;
@@ -24,6 +27,8 @@ html{
     border-radius: 5px;
     display: flex;
     margin: auto;
+    background: rgba(255, 255, 255, 0.6)
+
 }
 
 #form-signin{
