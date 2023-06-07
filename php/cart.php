@@ -33,3 +33,8 @@
     <?php include 'footer.php'; ?>
 </body>
 </html>
+<?php
+if (isset($_GET['checkout_success']) && $_GET['checkout_success'] == 1) {
+    echo '<script>alert("Checkout successful!");</script>';
+}
+?>
