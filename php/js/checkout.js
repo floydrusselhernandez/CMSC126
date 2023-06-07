@@ -20,7 +20,6 @@ function openPopup(action) {
       document.getElementById("cancelText").innerText = "Cancel Checkout?";
     }
     popup.style.display = 'block';
-    document.body.style.overflow = 'hidden';
 
   }
 

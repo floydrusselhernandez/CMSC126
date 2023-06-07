@@ -57,7 +57,6 @@
   }
   
   form {
-    margin-top: 10px;
     display: flex; /* Add this line */
     align-items: center; /* Add this line */
   }

@@ -168,15 +168,17 @@ body {
     padding: 5px 10px;
 }
 
-.search a {
+.search button {
     color: #fff;
     text-decoration: none;
     margin-left: 5px;
     font-size: 30px;
     transition: color 0.3s;
+    background: none;
+    border: none;
 }
 
-.search a:hover {
+.search button:hover {
     color: gray;
 }
 

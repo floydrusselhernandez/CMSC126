@@ -2,7 +2,6 @@
 function openPopup(productId) {
   var popup = document.getElementById("popup-" + productId);
   popup.style.display = "block";
-  document.body.style.overflow = 'hidden';
 }
 
 // Close the confirmation popup and perform the removal if confirmed

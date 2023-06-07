@@ -52,6 +52,7 @@ function applySorting($sortBy)
             $sql .= " ORDER BY w.wish_date DESC";
     }
 
+
     $result = $conn->query($sql);
 
     // Return the sorted result

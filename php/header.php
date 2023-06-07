@@ -33,10 +33,12 @@
     <div class="search-filter-container">
         <!-- Search Bar -->
         <div class="search">
-            <input type="text" placeholder="Search...">
-            <a href="#">
-                <div class="fas fa-search" id="search-btn"></div>
-            </a>
+            <form action="searchResult.php" method="POST">
+                <input type="text" placeholder="Search..." name="search_query" value="<?php echo isset($_SESSION['search_query']) ? $_SESSION['search_query'] : ''; ?>">
+                <button type="submit">
+                    <div class="fas fa-search" id="search-btn"></div>
+                </button>
+            </form>
         </div>
     </div>
 
