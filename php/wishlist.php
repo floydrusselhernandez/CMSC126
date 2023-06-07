@@ -53,7 +53,7 @@ $paginatedResult = array_slice($sql, $offset, $itemsPerPage);
 
     <!-- Sort By -->
     <div class="sort-by">
-        <label for="sortby">Sort by:</label>
+        <label for="sortby"><b>Sort by:</b></label>
         <select id="sortby" name="sortby"onchange="applySort()">
             <option value="newest" <?php if ($selectedOption === 'newest') echo 'selected'; ?>>
                 Newest
@@ -76,8 +76,8 @@ $paginatedResult = array_slice($sql, $offset, $itemsPerPage);
             <tr>
                 <td class="cat" style="float: right">
                 <div class="category">
-                    <label for="filterby" class="filterby">Filter by...</label><br>
-                    <label for="categories">Categories:</label><br>
+                    <label for="filterby" class="filterby"><b>Filter by...</b></label><br>
+                    <label for="categories"><b>Categories:</b></label><br>
                     <input type="radio" id="books" name="categories" value="books">
                     <label for="books">Books</label><br>
                     <input type="radio" id="figures" name="categories" value="figures">
@@ -86,7 +86,7 @@ $paginatedResult = array_slice($sql, $offset, $itemsPerPage);
                     <label for="clothing">Clothing</label>
                 </div>
                 <div class="genre">
-                    <label for="genre"><br>Genre:</label><br>
+                    <label for="genre"><br><b>Genre:</b></label><br>
                     <input type="radio" id="adventure" name="genre" value="adventure">
                     <label for="adventure">Adventure</label><br>
                     <input type="radio" id="action" name="genre" value="action">
