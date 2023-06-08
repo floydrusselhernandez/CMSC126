@@ -1,14 +1,4 @@
-function validateForm() {
-    var form = document.querySelector('form');
-    var checkoutBtn = document.getElementById('checkoutBtn');
-    checkoutBtn.disabled = !form.checkValidity();
-  }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var form = document.querySelector('form');
-    form.addEventListener('input', validateForm);
-    form.addEventListener('change', validateForm);
-  });
 
 function openPopup(action) {
     var popup;
