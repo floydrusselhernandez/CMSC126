@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+  
+html{
+      background-color: rgb(179, 174, 174);
+      font-family: Poppins;
+}
+.signin{
+    align-content: flex-start;
+    margin: 10px;
+    width: 600px;
+    height: 450px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    display: flex;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6)
+}
+.login{
+    margin: 10px;
+    text-align: center;
+    width: 600px;
+    height: 275px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    display: flex;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6)
+
+}
+
+#form-signin{
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+#form-login{
+    padding: 5px;
+    margin: 10px auto;
+    text-align: center;
+    width: 600px;
+    height: 200px;
+}
+#signin-text, #login-text{
+    text-transform: capitalize;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: Poppins;
+}
+#sign-up, #log-in{
+    padding: 2px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: Poppins;
+}
+#sign-up:hover, #log-in:hover{
+    padding: 2px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Poppins;
+}

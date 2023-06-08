@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+    font-family: Century Gothic;
+}
+/* Styles the text */
+.gallery{
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: Poppins;
+    text-align: center;
+}
+/* Submit Button */
+.submit a:link, a:visited{
+    padding: 15px 25px;
+    margin-left: 30px;
+    font-family: Poppins;
+    background-color: #7c7c7c;
+    color: #000000;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.submit a:hover, a:active{
+    font-weight: bold;
+    color: #ffffff;
+}
+.submit-form{
+    align-content: flex-start;
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    display: flex;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#submit-art{
+  padding: 0px 5px 0px 15px;
+  font-weight: bolder;
+  text-align: left;
+  background-color: #000000;
+  color: #ffffff;
+}
+#upload-text {
+  text-transform: capitalize;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 10px;
+}
+#file-upload {
+  padding: 10px;
+  margin: 5 auto;
+  font-weight: bold;
+  text-align: left;
+}
+
+a[href="shop.html"]:hover{
+  border: 2px solid black;
+  border-radius: 3px;
+  font-family: Century Gothic;
+  font-weight: bold;
+}
+a[href="shop.html"]{
+  font-family: Century Gothic;
+  font-size: large;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Navbar for Featured, Best, Random, and Special Creators */
+.navbar{
+    font-family: 'Poppins';
+    font-size: medium;
+    text-align: center;
+    background-color: black;
+
+}
+.navbar a:link, .navbar a:visited{
+    padding: 15px 25px;
+    margin-left: 30px;
+    font-family: 'Poppins';
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+}
+.navbar a:hover, .navbar a:active{
+    background-color: #7c7c7c;
+    font-weight: bold;
+    color: #000000;
+}
+.featured{
+  overflow-x: auto;
+  padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.image{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  padding: 0 4px;
+  justify-content: space-evenly;
+}
+
+.image img:hover{
+  outline: invert;
+  box-shadow: 0px 0px 20px black;
+}
+
+.image img{
+  margin-top: 8px;
+  vertical-align: middle;
+  width: auto;
+  height: 200px;
+  border-radius: 5px;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px){
+  .image{
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px){
+  .image{
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* placeholder style*/
+#search{
+  border-radius: 5px;
+  font-size: large;
+  font-family: Century Gothic;
+}
+/* Search option in Special Creators Page */
+input[type="search"]{
+  margin: 10px;
+  text-align: left;
+  width: 55%;
+  justify-content: center;
+  align-items: center;
+  display: flexbox;
+}
+/* border for the whole list of artists */
+.artists{
+  border: 2px solid white;
+  border-radius: 5px;
+}
+/* hover effect on the artists */
+#artist1:hover, #artist2:hover, #artist3:hover, #artist4:hover{
+  background-color: #222222;
+  color: whitesmoke;
+}
+label[class="artist-name"]{
+  font-weight: bold;
+  font-size: x-large;
+}
+.artists img{
+  border-radius: 5px;
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  display: flexbox;
+  margin: 10px;
+}
+
+/* Shop page table*/
+#product-name{
+  font-size: x-large;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 1px;
+}
+.shop-item img, .product-views img{
+  border-radius: 5px;
+  width: 275px;
+  height: 275px;
+  object-fit: cover;
+  margin: 10px;
+}
