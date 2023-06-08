@@ -1,10 +1,10 @@
 
 function handleChangeAddress () {
     let locationDOM = document.getElementById("location");
-    locationDOM.className = "hide-item"
+    locationDOM.style.display = "none"
 
     let locationInputDOM = document.getElementById('location-input')
-    locationInputDOM.className = ""
+    locationInputDOM.style.display = "flex"
 }
 let address = "Iloilo, Miagao, Bagumbayan";
 console.log("testing");

@@ -42,3 +42,8 @@ input[type="button"]{
 .hide-item {
     display: none;
 }
+
+.address-container {
+    display: flex;
+    justify-content: space-between;
+}

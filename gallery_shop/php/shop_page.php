@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,7 +11,7 @@
         <link rel="stylesheet" href="shop_page.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <script src="shop_page.js"></script>
+        <script src="shop_page.js"></script>        
     </head>
     <body>
         <!-- Header -->
@@ -88,7 +90,6 @@
             <td></td>
         
             <td style="width:45%" rowspan="6">
-                
                 <div id="item-name">
                     <b>Jujutsu Kaisen 0: The Movie Yuta Okkotsu and Special Grade Vengeful Cursed Spirit Rika Orimoto 1/7 Scale Figure </b>
                 </div>
@@ -119,8 +120,6 @@
                     <del>₱2,780</del> <b>₱2,580</b>
                 </div>
                 <input type="submit" value="ADD TO CART">
-
-
                 <input type="submit" value="ADD TO WISHLIST">
                 <hr>
                 <table>
