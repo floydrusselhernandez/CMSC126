@@ -1,0 +1,44 @@
+.variations img{
+    width: 100px;
+    height: 100px;
+}
+
+.center-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#item-name, .item-price{
+    padding: 10px;
+    font-size: xx-large;
+}
+.variations, .sizes{
+    padding: 10px;
+    font-weight: bold;
+}
+input[type="button"]{
+    font-size: medium;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+#product-details{
+    padding-left: 30px;
+}
+#rating{
+    font-size: medium;
+    font-family: century gothic;
+}
+#related-items{
+    font-size: larger;
+    font-weight: bold;
+}
+.related-products, .item-info{
+    padding: 10px;
+    margin: 5px;
+}
+
+.hide-item {
+    display: none;
+}

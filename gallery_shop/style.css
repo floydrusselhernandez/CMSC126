@@ -36,45 +36,14 @@ html{
   background-color: #000000;
   color: #ffffff;
 }
-#submit-form{
-  background-image: url(images/submit-cover.png);
-}
-.form-upload{
-  margin: 10px;
-  border: 3px solid #ffffff;
-  border-radius: 5px;
-  width: 500px;
-  background: rgba(255, 255, 255, 0.5);
-}
 
-label[for="upload"]{
-  padding: 15px;
-  text-align: left;
-  font-size: x-large;
-}
-textarea[name="description"]{
-  padding: 10px;
-  align-self: center;
-}
-
-#file-upload, #title, #description {
-  padding-left: 10px;
-  font-weight: bold;
-  font-size: larger;
-  border-radius: 5px;
-  text-align: center;
-}
-textarea[name="description"], input[type="submit"], input[id="upload"]{
-  border-radius: 5px;
-  font-family: Century Gothic;
-}
-input[type="submit"]:hover, a[href="shop.html"]:hover{
+a[href="shop.html"]:hover{
   border: 2px solid black;
   border-radius: 3px;
   font-family: Century Gothic;
   font-weight: bold;
 }
-input[type="file"], input[type="submit"], a[href="shop.html"]{
+a[href="shop.html"]{
   font-family: Century Gothic;
   font-size: large;
   display: inline-block;
@@ -182,9 +151,6 @@ label[class="artist-name"]{
 }
 
 /* Shop page table*/
-.shop-item{
-  border: 2px solid black;
-}
 #product-name{
   font-size: x-large;
   color: aliceblue;
@@ -193,9 +159,8 @@ label[class="artist-name"]{
 }
 .shop-item img, .product-views img{
   border-radius: 5px;
-  width: 250px;
-  height: 250px;
+  width: 275px;
+  height: 275px;
   object-fit: cover;
-  display: flexbox;
   margin: 10px;
 }
