@@ -237,7 +237,7 @@ $paginatedResult = array_slice($sql, $offset, $itemsPerPage);
 
     <!-- Footer -->
     <?php include 'footer.php'; ?>
-    <script src="js/wishlist.js"></script>
+    <script src="js/home_results.js"></script>
 </body>
 
 </html>

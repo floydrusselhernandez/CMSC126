@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Best</title>
-        <link rel="icon" href="res/BlackLogo.png">
+        <link rel="icon" type="image/png" href="res/logo1.png">
         <link rel="stylesheet" href="css/design.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 	    <link rel="stylesheet" type="text/css" href="css/header.css">

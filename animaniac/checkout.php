@@ -44,7 +44,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             <td>
                 <div class="container">
                     <h1>CHECKOUT</h1>
-                    <form action="sold.php" method="post">
+                    <form class="checkout-form" action="sold.php" method="post">
                         <div class="form-group">
                             <label for="name">Full Name</label><br>
                             <input type="text" id="name" name="name" required oninput="validateForm()">
