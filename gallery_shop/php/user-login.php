@@ -106,6 +106,7 @@
                     By clicking Sign Up, you agree to our Terms, <u>Privacy Policy</u> and <u>Cookies Policy</u>.
                 </div>
                 <button id="sign-up">Sign Up</button><br>
+                
                 <div>
                     <label for="new-acc">Have an account?</label>
                     <a href="log-in.html">Log in</a>

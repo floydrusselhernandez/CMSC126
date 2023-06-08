@@ -16,7 +16,7 @@
             <div class="explore-content">
                 <table style="width:100%">
                     <tr>
-                        <th><a href="gallery.php"><b><u>Gallery</u></b></a></th>
+                        <th><a href="gallery_shop/gallery.php"><b><u>Gallery</u></b></a></th>
                         <th><a href="news.php"><b><u>News</u></b></a></th>
                     </tr>
                     <tr>
@@ -51,7 +51,7 @@
         <a href="feedbackAwaiting.php" class="notif">
             <div class="fas fa-bell" id="notif-btn"></div>
         </a>
-        <a href="#" class="user">
+        <a href="gallery_shop/php/user-login.php" class="user">
             <div class="fas fa-user" id="user-btn"></div>
         </a>
     </div>
