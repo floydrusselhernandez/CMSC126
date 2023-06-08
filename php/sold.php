@@ -17,6 +17,9 @@ if (isset($_POST['submitCheck'])) {
         $productUpdateQuery = "UPDATE product SET sold = sold + $quantity WHERE product_id = $productId";
         $resultUpdate = $conn->query($productUpdateQuery);
 
+        // Inserts purchased product into Delivered Table
+        $cartDeliveryQuery = "INSERT INTO delivered (product_id, user_id) SELECT c.product_id, c.user_id FROM cart AS c WHERE cart_id = $cartId;";
+        $resultDelivery = $conn->query($cartDeliveryQuery);
         // Delete the cart row
         $cartDeleteQuery = "DELETE FROM cart WHERE cart_id = $cartId";
         $resultDelete = $conn->query($cartDeleteQuery);
