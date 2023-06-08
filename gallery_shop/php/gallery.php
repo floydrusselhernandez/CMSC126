@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width, initial scale = 1">
-        <link rel="icon" href="images/BlackLogo.png">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <title>ANIMANIAC - Create Account</title>
-        <link rel="stylesheet" href="login-signin.css">
-        <link rel="stylesheet" href="header.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Best</title>
+        <link rel="icon" href="res/BlackLogo.png">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     </head>
-    <body>
-         <!-- Header -->
+
+<body>
+    <!-- Header -->
     <header class="main-header" id="top">
         <div class="logo-explore-container">
             <!-- Logo and Name -->
@@ -82,36 +83,57 @@
             </a>
         </div>
     </header>
-        <div class="signin">
-            <div method="post" action="signup.php" id="form-signin">
-                <div id="signin-text">
-                    CREATE ACCOUNT
-                </div>
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required><br>
-                </div>
-                <div>
-                    <input type="text" id="username" name="username" placeholder="Username" required><br>
-                </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Email" required><br>
-                </div>
-                <div>
-                    <input type="password" id="password" name="password" placeholder="Password" required><br>
-                </div>
-                <div>
-                    <input type="password" id="retype-password" name="retype-password" placeholder="Re-type Password" required><br>
-                </div>
-                <div>
-                    By clicking Sign Up, you agree to our Terms, <u>Privacy Policy</u> and <u>Cookies Policy</u>.
-                </div>
-                <button id="sign-up">Sign Up</button><br>
-                <div>
-                    <label for="new-acc">Have an account?</label>
-                    <a href="log-in.html">Log in</a>
-                </div>
+    
+    <section class="gallery" id="gallery">
+        <div class="gallery">
+                <h1>WANNA SHARE YOUR OWN ANIME ARTWORK?</h1>
+        </div>
+        <div class="submit">
+            <a href="submit.html">Submit Now</a>
+        </div> 
+    </section>
+    <br>
+
+    <div class="navbar">
+            <a href="gallery.html">Featured</a>
+            <a href="best.html">Best</a>
+            <a href="random.html">Random</a>
+            <a href="special.html">Special Creators</a>   
+    </div>
+    <br>
+    <section>
+        <div class="featured">
+            <div class="image">
+                <img src="images/demon-slayer.jpg" alt="demon-slayer">
+                <img src="images/one piece.jpg" alt="one piece">
+                <img src="images/tokyo-ghoul.jpg" alt="tokyo-ghoul">
+                <img src="images/digi.jpg" alt="digi">
+            </div>
+            <div class="image">
+                <img src="images/sexy.jpg" alt="sexy">
+                <img src="images/hero.jpeg" alt="hero">
+                <img src="images/jujutsu-kaisen.jpg" alt="jujutsu-kaisen">
+                <img src="images/cells.jpg" alt="cells">
+                <img src="images/purple boy.jpg" alt="purple">
+            </div>
+            <div class="image">
+                <img src="images/one_piece_phone.jpg" alt="one_piece_phone">
+                <img src="images/digi.jpg" alt="digi">
+                <img src="images/Tanjiro Kamado.jpg" alt="Tanjiro">
+                <img src="images/boy_anime.jpg" alt="boy">
+                <img src="images/jujutsu-kaisen.jpg" alt="jujutsu-kaisen">
+                <img src="images/goku.jpeg" alt="goku">
+            </div>
+            <div class="image">
+                <img src="images/girl_anime.jpg" alt="girl_anime">
+                <img src="images/hunters.png" alt="hunters">
+                <img src="images/solo-levelling.jpg" alt="solo-levelling">
+                <img src="images/digi.jpg" alt="digi">
+                <img src="images/Tanjiro Kamado.jpg" alt="Tanjiro">
+                <img src="images/haikyuuu.jpg" alt="haikyuuu">
             </div>
         </div>
+    </section>
         <!-- Footer -->
         <footer class="main-footer">
             <div class="footer-logo">
@@ -121,5 +143,5 @@
                 </a>
             </div>
         </footer>
-    </body>
+</body>
 </html>

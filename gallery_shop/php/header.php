@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width, initial scale = 1">
-        <link rel="icon" href="images/BlackLogo.png">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <title>ANIMANIAC - Create Account</title>
-        <link rel="stylesheet" href="login-signin.css">
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    </head>
-    <body>
-         <!-- Header -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="icon" href="res/BlackLogo.png">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
     <header class="main-header" id="top">
         <div class="logo-explore-container">
             <!-- Logo and Name -->
@@ -77,49 +75,24 @@
             <a href="feedbackAwaiting.html" class="notif">
                 <div class="fas fa-bell" id="notif-btn"></div>
             </a>
-            <a href="user-login.html" class="user">
+            <a href="#" class="user">
                 <div class="fas fa-user" id="user-btn"></div>
             </a>
         </div>
     </header>
-        <div class="signin">
-            <div method="post" action="signup.php" id="form-signin">
-                <div id="signin-text">
-                    CREATE ACCOUNT
-                </div>
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required><br>
-                </div>
-                <div>
-                    <input type="text" id="username" name="username" placeholder="Username" required><br>
-                </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Email" required><br>
-                </div>
-                <div>
-                    <input type="password" id="password" name="password" placeholder="Password" required><br>
-                </div>
-                <div>
-                    <input type="password" id="retype-password" name="retype-password" placeholder="Re-type Password" required><br>
-                </div>
-                <div>
-                    By clicking Sign Up, you agree to our Terms, <u>Privacy Policy</u> and <u>Cookies Policy</u>.
-                </div>
-                <button id="sign-up">Sign Up</button><br>
-                <div>
-                    <label for="new-acc">Have an account?</label>
-                    <a href="log-in.html">Log in</a>
-                </div>
-            </div>
+
+
+    <!-- Page Contents -->
+
+    
+    Footer
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="#top" class="footer-logo-link">
+                <img id="Logo_White" src="res/Logo_White.png">
+                <img id="AnimaniacTxt_White" src="res/AnimaniacTxt_White.png">
+            </a>
         </div>
-        <!-- Footer -->
-        <footer class="main-footer">
-            <div class="footer-logo">
-                <a href="#top" class="footer-logo-link">
-                    <img id="logoWhite" src="res/Logo_White.png">
-                    <img id="animaniacTxtWhite" src="res/AnimaniacTxt_White.png">
-                </a>
-            </div>
-        </footer>
-    </body>
+    </footer>
+</body>
 </html>

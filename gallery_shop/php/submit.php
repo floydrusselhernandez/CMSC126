@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width, initial scale = 1">
-        <link rel="icon" href="images/BlackLogo.png">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <title>ANIMANIAC - Create Account</title>
-        <link rel="stylesheet" href="login-signin.css">
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    </head>
-    <body>
-         <!-- Header -->
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, initial scale = 1">
+    <link rel="icon" href="images/BlackLogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>ANIMANIAC - Submit Artwork</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <!-- Header -->
     <header class="main-header" id="top">
         <div class="logo-explore-container">
             <!-- Logo and Name -->
@@ -82,44 +83,49 @@
             </a>
         </div>
     </header>
-        <div class="signin">
-            <div method="post" action="signup.php" id="form-signin">
-                <div id="signin-text">
-                    CREATE ACCOUNT
-                </div>
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required><br>
-                </div>
-                <div>
-                    <input type="text" id="username" name="username" placeholder="Username" required><br>
-                </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Email" required><br>
-                </div>
-                <div>
-                    <input type="password" id="password" name="password" placeholder="Password" required><br>
-                </div>
-                <div>
-                    <input type="password" id="retype-password" name="retype-password" placeholder="Re-type Password" required><br>
-                </div>
-                <div>
-                    By clicking Sign Up, you agree to our Terms, <u>Privacy Policy</u> and <u>Cookies Policy</u>.
-                </div>
-                <button id="sign-up">Sign Up</button><br>
-                <div>
-                    <label for="new-acc">Have an account?</label>
-                    <a href="log-in.html">Log in</a>
-                </div>
+    <br>
+
+    <div id="submit-art">
+        <h1>SUBMIT ARTWORK</h1>
+    </div>
+<div class="sub-artwork">
+    <div class="submit-form">
+        <div id="file-upload">
+            <div id="upload-text">
+                UPLOAD FILE
+            </div>
+            <br>
+            <div>
+                <input type="file" id="upload" name="UPLOAD FILE" required><br>
+                JPEG, JPG, PNG, GIF maximum size: 50MB
+            </div>
+            <hr>
+            <div>
+                <label for="artwork-title">Artwork Title</label><br>
+                <input type="text" id="artwork-title" name="Artwork Title">
+                <hr>
+            </div>
+            <div id="description">
+                <label for="description">Description:</label><br>
+                <textarea name="description" rows="10" cols="45" placeholder="Describe your artwork here..."></textarea>
+                <br> Please do not upload any copyright infringing content.<br>
+            </div>
+            <div id="sub-can">
+                <button id="post">POST</button>
+                <a href="gallery.html">Cancel</a>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="main-footer">
-            <div class="footer-logo">
-                <a href="#top" class="footer-logo-link">
-                    <img id="logoWhite" src="res/Logo_White.png">
-                    <img id="animaniacTxtWhite" src="res/AnimaniacTxt_White.png">
-                </a>
-            </div>
-        </footer>
-    </body>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="#top" class="footer-logo-link">
+                <img id="logoWhite" src="res/Logo_White.png">
+                <img id="animaniacTxtWhite" src="res/AnimaniacTxt_White.png">
+            </a>
+        </div>
+    </footer>
+</body>
 </html>
